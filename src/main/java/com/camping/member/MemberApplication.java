@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
 @EnableJpaAuditing // JPA Auditing 기능을 활성화합니다.
-
 public class MemberApplication {
 
 	public static void main(String[] args) {
