@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: member-service
+  namespace: camping
+  labels:
+    app: member-app
+spec:
+  selector:
+    app: member-app
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
