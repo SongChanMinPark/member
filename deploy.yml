@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: member-deployment
+  name: member
   namespace: camping
   labels:
     app: member-app
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: camping-member
-          image: campingacr.azurecr.io/member
+          image: campingacr.azurecr.io/member:$(Build.BuildId)
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
